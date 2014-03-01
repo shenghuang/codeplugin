@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "version": "1.0",
+  "default_locale": "en",
+  "background": {
+    "scripts": ["data.js", "background.js"]
+  },
+  
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://demo.ckan.org/",
+    "http://ckan.net/",
+    "http://data.gc.ca/"
+  ],
+  "browser_action": {
+    "default_icon": "res/goc_open_data.png",
+    "default_popup": "popup.html"
+  }
+}
