@@ -1,7 +1,23 @@
-The code plugin uses the following sources so thanks to the following parties:
-1. Maple Leaf image downloaded from https://openclipart.org/ contributed by Merlin2525
-2. Google Chrome extension tutorial at http://developer.chrome.com/extensions/
+The code plugin software is a Chrome extension to help users search and use GoC Open Data, thus contribute to solving problems and increasing productivity through the use of Open Data.
 
-Main features are:
-multilingual 
-Data dublin core metadata search
+It has the following major features:
+1. An option page allows user to type keywords to search datasets. Returned datasets are displayed in the format of links to the owner org's website if url is provided in the dataset, or else links to the data.gc.ca site. 
+2. Search term and results are saved in HTML5 local storage so that they persist during browser restarts, number of unvisited links are displayed in the plugin counter.
+3. A Javascript listener monitors visited links and update the plugin counter. 
+4. Users can easily share interested datasets on their social media websites including Twitter and Facebook.
+5. Multilingual support. All pages can be displayed in two official languages - English or French depending on the user browser locale. 
+6. HTML5 messaging API is used to dynamic update and synchronise contents across different pages without the confusion of page refreshing 
+
+For datasets with geolocation information, a custom resizable circle will be displayed on top of Google charts with an display of how many data items/activities are within the range of their current location. Clicking on the circle will show related datasets. For example, if a user search historical disasters within 50 kilo meters of their current location, count of disasters will be displayed in the circle, changing the size of the circle will change number of events displayed.
+
+More features like storing the search results in browser bookmarks, and notifying users when interested datasets have been updated on the server can be easily added to the plugin.
+
+As Chrome has around 40% market share of desktop and mobile browsers (http://en.wikipedia.org/wiki/Usage_share_of_web_browsers), this browser extension will be able to reach a large user community and help them to use and manage datasets in which they are interested. 
+As all major browsers including IE, Firefox, Chrome, Opera and Safari support extensions (http://en.wikipedia.org/wiki/Browser_extension), the same approach can be applied to other browsers.
+
+This software uses information/software from the following sites so thank to:
+1. Maple Leaf image downloaded from https://openclipart.org/ contributed by Merlin2525
+   Setting icon downloaded from http://www.softicons.com/free-icons/android-icons/android-application-icons-2-by-bharath-prabhuswamy/settings-icon
+   Google Map icon downloaded from http://en.wikipedia.org/wiki/Google_Maps
+2. Google Chrome extension tutorial at http://developer.chrome.com/extensions/
+3. CSS rules from http://data.gc.ca/

@@ -1,0 +1,56 @@
+ul.dataset-items {
+	color: #000;
+	direction: ltr;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12.8px;
+	line-height: 19.2px;
+	list-style-type: none;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 5px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-shadow: none;
+}
+
+li.dataset-item {
+	background-color: #EEE;
+	border-bottom-color: #CCC;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-image-outset: 0 0 0 0;
+	border-image-repeat: stretch stretch;
+	border-image-slice: 100% 100% 100% 100%;
+	border-image-source: none;
+	border-image-width: 1 1 1 1;
+	border-left-color: #CCC;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #CCC;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #CCC;
+	border-top-style: solid;
+	border-top-width: 1px;
+	color: #000;
+	direction: ltr;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12.8px;
+	line-height: 19.2px;
+	list-style-type: none;
+	margin-bottom: 2px;
+	margin-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	text-shadow: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+}
+

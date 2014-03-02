@@ -1,6 +1,38 @@
 {
   "app_name": {
-    "message": "GdC Donn�es ouvertes canadienne",
-    "description": "Chrome Plugin for GoC Open Data"
+    "message": "GdC Données ouvertes canadienne"
+  },
+  "app_desc": {
+    "message": "Chrome Plugin for GoC Open Data"
+  },
+  "button_search": {
+    "message": "Recherche"
+  },  
+  "button_cancel": {
+    "message": "Annuler"
+  },  
+  "site_url": {
+    "message": "http:/data.gc.ca/data/"
+  },
+  "language": {
+    "message": "fr"
+  },  
+  "field_desc": {
+    "message": "notes_fra"
+  },
+  "field_title": {
+    "message": "title_fra"
+  },
+  "search_result": {
+    "message": "Résultats de la recherche:"
+  },
+  "empty_result": {
+    "message": "Aucun jeu de données ne correspond aux termes de recherche spécifiés. S'il vous plaît vérifier l’orthographe, ou réduire le nombre de filtres sélectionnés."   
+  },   
+  "with_result1": {
+    "message": "Résultats de la recherche pour {term} :"   
+  },
+  "with_result2": {
+    "message": "{count} jeux de données trouvés"   
   }
 }

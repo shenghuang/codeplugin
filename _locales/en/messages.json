@@ -1,6 +1,39 @@
 {
   "app_name": {
-    "message": "GoC Open Data",
-    "description": "Chrome Plugin for GoC Open Data"
+    "message": "GoC Open Data"
+  },
+  "app_desc": {
+    "message": "Chrome Plugin for GoC Open Data"
+  },
+  "button_search": {
+    "message": "Search"
+  },  
+  "button_cancel": {
+    "message": "Cancel"
+  },  
+  "site_url": {
+    "message": "http:/data.gc.ca/data/"
+  },
+  "language": {
+    "message": "en"
+  }, 
+  "field_desc": {
+    "message": "notes"
+  },
+  "field_title": {
+    "message": "title"
+  },
+  "search_result": {
+    "message": "Search Results:"
+  },
+  "empty_result": {
+    "message": "No datasets were found to match your query. Please review your spelling, or reduce the number of filters selected."   
+  },
+  "with_result1": {
+    "message": "Search Results for {term}:"   
+  },
+  "with_result2": {
+    "message": "{count} datasets found"   
   }
-}
+}  
+   
