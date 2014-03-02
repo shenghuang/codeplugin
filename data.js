@@ -2,7 +2,7 @@
  * JS functions for loaded user data (refer to Google weather example)
  */
 
-function Term(datasetId, text, desc, url, orgId) {
+function Term(datasetId, text, desc, url, orgId, geocode) {
 	//TODO: this doesn't really need to be a member, can just be a method, and then we don't need to worry about changing id format & sync issues
 	this.datasetId = datasetId;
 	this.text = text;
@@ -11,6 +11,7 @@ function Term(datasetId, text, desc, url, orgId) {
 	this.visited = false;
 	this.date = new Date();
 	this.desc = desc;
+	this.geocode = geocode;
 }
 
 function Terms() {

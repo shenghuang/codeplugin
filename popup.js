@@ -102,8 +102,21 @@ var terms = null;
 				for (var i = 0; i <results.length; i++) {
 					var desc = results[i][descField];
 					desc = LZString.compressToBase64(desc);
+					
+					var geocode = null;
+					var extras = results[i]["extras"];
+					if (extras != null && extras.length > 0) {
+						for (var j = 0; j <extras.length; j++) {
+							var extra = extras[j];
+							if (extra["key"] == "spatial") {
+								geocode =  LZString.compressToBase64(extra["value"]);
+								break;
+							}
+						}
+					}
+					
 					//alert('to add term '+results[i]['id']+'\r\n'+results[i][titleField]+'\r\n'+desc+'\r\n'+results[i]['url']+'\r\n'+results[i]['owner_org']);
-					addTerm(results[i]['id'], results[i][titleField], desc, getUrl(results[i], i), results[i]['owner_org']);
+					addTerm(results[i]['id'], results[i][titleField], desc, getUrl(results[i], i), results[i]['owner_org'], geocode);
 				}
 				
 	    		chrome.tabs.query({
@@ -130,10 +143,24 @@ var terms = null;
 	    				for (var i = 0; i <results.length; i++) {
 	    					var desc = results[i][descField];
 	    					desc = LZString.compressToBase64(desc);
+
+	    					var geocode = null;
+	    					var extras = results[i]["extras"];
+	    					if (extras != null && extras.length > 0) {
+	    						for (var j = 0; j <extras.length; j++) {
+	    							var extra = extras[j];
+	    							if (extra["key"] == "spatial") {
+	    								geocode =  LZString.compressToBase64(extra["value"]);
+	    								break;
+	    							}
+	    						}
+	    					}
+
 	    					var item = {
 	    						itemText: results[i][titleField],
 	    						itemDesc: desc,
-	    						url: getUrl(results[i], i)
+	    						url: getUrl(results[i], i),
+	    						geocode: geocode
 	    					};
 	    					items.push(item);
 	    				}
@@ -199,8 +226,8 @@ var terms = null;
 	    	//console.log('do invoke back');
     }
 	    
-    function addTerm(datasetId, text, desc, url, orgId) {
-    	  var myterm = new Term(datasetId, text, desc, url, orgId);
+    function addTerm(datasetId, text, desc, url, orgId, geocode) {
+    	  var myterm = new Term(datasetId, text, desc, url, orgId, geocode);
     	  terms.add(myterm);
     	  return myterm;
     }
@@ -219,7 +246,7 @@ var terms = null;
 		if (url.indexOf('?') != -1) {
 			url += "&codec="+index;
 		} else {
-			url += "?codec="+index;
+			url += "#codec="+index;
 		}
 		return url;
     }

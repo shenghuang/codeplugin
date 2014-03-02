@@ -12,7 +12,8 @@
   "permissions": [
     "unlimitedStorage",
     "tabs",
-    "http://data.gc.ca/"
+    "http://data.gc.ca/",
+    "http://shrouded-dawn-1777.herokuapp.com/"
   ],
 
   "browser_action": {

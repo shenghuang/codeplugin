@@ -183,7 +183,7 @@ body:hover.not-mobile #close {
 
 #settingsToggle {
   background: url('img/settings.png') center no-repeat;
-  background-size: 14px 14px;
+  background-size: 36px 36px;
   position: absolute;
   top: 0px;
   right: 0px;
