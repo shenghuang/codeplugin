@@ -1,6 +1,6 @@
 codeplugin
 ==========
 
-Chrome Plugin for CODE
+Chrome Plugin for CODE 2014
 
-For more details, read README
+For design and implementation details, please read README

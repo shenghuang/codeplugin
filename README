@@ -1,21 +1,30 @@
-The code plugin software is a Chrome extension to help users search and use GoC Open Data, thus contribute to solving problems and increasing productivity through the use of Open Data.
+The code plugin software is a Chrome extension to help users search and use GoC Open Data, thus contribute to solving problems and 
+increasing productivity through the use of Open Data.
 
 It has the following major features:
-1. An option page allows user to type keywords to search datasets. Returned datasets are displayed in the format of links to the owner org's website if url is provided in the dataset, or else links to the data.gc.ca site. 
-2. Search term and results are saved in HTML5 local storage so that they persist during browser restarts, number of unvisited links are displayed in the plugin counter.
-3. A Javascript listener monitors visited links and update the plugin counter. 
+1. An option page allows users to input keywords for searching datasets. Returned datasets are displayed in the format of links to 
+the owner org's website if the url is provided in the dataset, or else links to the data.gc.ca site are displayed. 
+2. Search term and results are saved in HTML5 local storage so that they persist during browser restarts. Counter of unvisited links 
+are displayed on the extension icon shown to the right of the Chrome toolbar.
+3. A Javascript listener monitors links clicked by the user and update the plugin counter at the background. 
 4. Users can easily share interested datasets on their social media websites including Twitter and Facebook.
-5. Multilingual support. All pages can be displayed in two official languages - English or French depending on the user browser locale. 
-6. HTML5 messaging API is used to dynamic update and synchronise contents across different pages without the confusion of page refreshing 
+5. Multilingual support. All extension pages support both two official languages - English or French depending on the current user 
+browser locale. 
+6. HTML5 messaging API is used to dynamic update and synchronise contents across different pages without introducing the confusion of 
+page refreshes.
+7. If Geocoding information (spatial element in the CKAN datasets) is provided, a custom Google Map is provided to show the distance 
+between user's current location and the event location in the interested datasets. For example, if a user search "Severe Thunderstorms"
+from the datasets of Natural Resource Canada. 
 
-For datasets with geolocation information, a custom resizable circle will be displayed on top of Google charts with an display of how many data items/activities are within the range of their current location. Clicking on the circle will show related datasets. For example, if a user search historical disasters within 50 kilo meters of their current location, count of disasters will be displayed in the circle, changing the size of the circle will change number of events displayed.
+More features like storing the search results in browser bookmarks, and notifying users when interested datasets have been updated on the 
+server can be easily added to the plugin.
 
-More features like storing the search results in browser bookmarks, and notifying users when interested datasets have been updated on the server can be easily added to the plugin.
+As Chrome has around 40% market share of desktop and mobile browsers (http://en.wikipedia.org/wiki/Usage_share_of_web_browsers), this 
+browser extension will be able to reach a large user community and help them to use and manage datasets in which they are interested. 
+As all major browsers including IE, Firefox, Chrome, Opera and Safari support extensions (
+http://en.wikipedia.org/wiki/Browser_extension), the same approach can be applied to other browsers.
 
-As Chrome has around 40% market share of desktop and mobile browsers (http://en.wikipedia.org/wiki/Usage_share_of_web_browsers), this browser extension will be able to reach a large user community and help them to use and manage datasets in which they are interested. 
-As all major browsers including IE, Firefox, Chrome, Opera and Safari support extensions (http://en.wikipedia.org/wiki/Browser_extension), the same approach can be applied to other browsers.
-
-This software uses information/software from the following sites so thank to:
+This software uses information/software from the following sites so thank to the following parties:
 1. Maple Leaf image downloaded from https://openclipart.org/ contributed by Merlin2525
    Setting icon downloaded from http://www.softicons.com/free-icons/android-icons/android-application-icons-2-by-bharath-prabhuswamy/settings-icon
    Google Map icon downloaded from http://en.wikipedia.org/wiki/Google_Maps
