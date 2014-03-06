@@ -42,16 +42,17 @@ chrome.runtime.onMessage.addListener(function(msg, sender, response) {
           	  	liElement.appendChild(divElement2);
       	  	}
 
+      	  	var twitterText = "<a href\""+item.url+"\">"+item.itemText+"</a>";
       	  	var link2 = document.createElement('a');
       	  	link2.setAttribute("href", "#");
       	  	var facebookImage = document.createElement('img');
       	  	facebookImage.setAttribute("src", "img/facebook.png");
       	  	facebookImage.setAttribute("width", "36");
       	  	facebookImage.setAttribute("height", "36");
+      	  	facebookImage.setAttribute("alt", twitterText);
       	  	link2.appendChild(facebookImage);
       	  	liElement.appendChild(link2);
-      	  	var twitterText = "<a href\""+item.url+"\">"+item.itemText+"</a>";
-      	    link2.addEventListener('click', function(){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/facebook.html?codecText="+encodeURIComponent(twitterText)+"&lang="+chrome.i18n.getMessage("language"))});
+      	    link2.addEventListener('click', function(event){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/facebook.html?codecText="+encodeURIComponent(event.target.getAttribute("alt"))+"&lang="+chrome.i18n.getMessage("language"))});
 
       	  	var link3 = document.createElement('a');
       	  	link3.setAttribute("href", "#");
@@ -59,9 +60,10 @@ chrome.runtime.onMessage.addListener(function(msg, sender, response) {
       	  	twitterImage.setAttribute("src", "img/twitter.png");
       	  	twitterImage.setAttribute("width", "36");
       	  	twitterImage.setAttribute("height", "36");
+      	  	twitterImage.setAttribute("alt", twitterText);
       	  	link3.appendChild(twitterImage);
       	  	liElement.appendChild(link3);
-      	    link3.addEventListener('click', function(){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/facebook.html?codecText="+encodeURIComponent(twitterText)+"&lang="+chrome.i18n.getMessage("language"))});
+      	    link3.addEventListener('click', function(event){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/facebook.html?codecText="+encodeURIComponent(event.target.getAttribute("alt"))+"&lang="+chrome.i18n.getMessage("language"))});
 
 
       	    //Check extras/spatial
@@ -75,7 +77,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, response) {
 	      	  	mapImage.setAttribute("height", "36");
 	      	  	link4.appendChild(mapImage);
 	      	  	liElement.appendChild(link4);
-	      	    link4.addEventListener('click', function(){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/googlemap.html?geocode="+geocode)});
+	      	    link4.addEventListener('click', function(event){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/googlemap.html?geocode="+geocode)});
       	    }
       	    
       	    document.getElementById('dataset-items').appendChild(liElement);
@@ -154,16 +156,17 @@ function processTerms(terms) {
       	  	liElement.appendChild(divElement2);
   	  	}
   	  	
+  	  	var twitterText = "<a href\""+term.url+"\">"+term.text+"</a>";
   	  	var link2 = document.createElement('a');
   	  	link2.setAttribute("href", "#");
   	  	var facebookImage = document.createElement('img');
   	  	facebookImage.setAttribute("src", "img/facebook.png");
   	  	facebookImage.setAttribute("width", "36");
   	  	facebookImage.setAttribute("height", "36");
+  	  	facebookImage.setAttribute("alt", twitterText);
   	  	link2.appendChild(facebookImage);
   	  	liElement.appendChild(link2);
-  	  	var twitterText = "<a href\""+term.url+"\">"+term.text+"</a>";
-  	    link2.addEventListener('click', function(){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/facebook.html?codecText="+encodeURIComponent(twitterText)+"&lang="+chrome.i18n.getMessage("language"))});
+  	    link2.addEventListener('click', function(event){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/facebook.html?codecText="+encodeURIComponent(event.target.getAttribute("alt"))+"&lang="+chrome.i18n.getMessage("language"))});
 
   	  	var link3 = document.createElement('a');
   	  	link3.setAttribute("href", "#");
@@ -171,9 +174,10 @@ function processTerms(terms) {
   	  	twitterImage.setAttribute("src", "img/twitter.png");
   	  	twitterImage.setAttribute("width", "36");
   	  	twitterImage.setAttribute("height", "36");
+  	  	twitterImage.setAttribute("alt", twitterText);
   	  	link3.appendChild(twitterImage);
   	  	liElement.appendChild(link3);
-  	    link3.addEventListener('click', function(){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/facebook.html?codecText="+encodeURIComponent(twitterText)+"&lang="+chrome.i18n.getMessage("language"))});
+  	    link3.addEventListener('click', function(event){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/facebook.html?codecText="+encodeURIComponent(event.target.getAttribute("alt"))+"&lang="+chrome.i18n.getMessage("language"))});
 
   	    //Check extras/spatial
   	    if (term.geocode != null && term.geocode != "QAA=") {
@@ -186,7 +190,7 @@ function processTerms(terms) {
   	  	  	mapImage.setAttribute("height", "36");
   	  	  	link4.appendChild(mapImage);
   	  	  	liElement.appendChild(link4);
-  	  	    link4.addEventListener('click', function(){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/googlemap.html?geocode="+geocode)});  	    	
+  	  	    link4.addEventListener('click', function(event){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/googlemap.html?geocode="+geocode)});  	    	
   	    }
 
   	    
@@ -221,4 +225,3 @@ function openLinkHandler(url) {
 	var child = window.open(url, "Media", 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0');
 	return false;
 }
-
