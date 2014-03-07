@@ -75,9 +75,10 @@ chrome.runtime.onMessage.addListener(function(msg, sender, response) {
 	      	  	mapImage.setAttribute("src", "img/google-map.png");
 	      	  	mapImage.setAttribute("width", "36");
 	      	  	mapImage.setAttribute("height", "36");
+	      	  	mapImage.setAttribute("alt", geocode);
 	      	  	link4.appendChild(mapImage);
 	      	  	liElement.appendChild(link4);
-	      	    link4.addEventListener('click', function(event){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/googlemap.html?geocode="+geocode)});
+	      	    link4.addEventListener('click', function(event){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/googlemap.html?geocode="+event.target.getAttribute("alt"))});
       	    }
       	    
       	    document.getElementById('dataset-items').appendChild(liElement);
@@ -188,9 +189,10 @@ function processTerms(terms) {
   	  	  	mapImage.setAttribute("src", "img/google-map.png");
   	  	  	mapImage.setAttribute("width", "36");
   	  	  	mapImage.setAttribute("height", "36");
+      	  	mapImage.setAttribute("alt", geocode);
   	  	  	link4.appendChild(mapImage);
   	  	  	liElement.appendChild(link4);
-  	  	    link4.addEventListener('click', function(event){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/googlemap.html?geocode="+geocode)});  	    	
+  	  	    link4.addEventListener('click', function(event){openLinkHandler("http://shrouded-dawn-1777.herokuapp.com/googlemap.html?geocode="+event.target.getAttribute("alt"))});  	    	
   	    }
 
   	    
