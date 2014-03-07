@@ -244,9 +244,9 @@ var terms = null;
 		}
 
 		if (url.indexOf('?') != -1) {
-			url += "&codec="+index;
+			url = url.trim()+"&codec="+index;
 		} else {
-			url += "#codec="+index;
+			url = url.trim()+"#codec="+index;
 		}
 		return url;
     }
